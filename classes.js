@@ -10,12 +10,12 @@
 Так же должны иметься три метода:
 
 -changeCompany(newCompanyName) - сотрудник может сменить компанию, либо же просто уволиться
--upGrade(newGradeName) - сотрудник может повысить квалификацию
+-upGrade() - сотрудник может повысить квалификацию
 -addSkill(newSkillName) - сотрудник может дополнить список своих скиллов.
 */
 
 
-class Empleyee {
+class Employee {
     constructor (name, grade, hardSkills, company) {
         this.name = name;
         this.grade = grade;
@@ -26,13 +26,30 @@ class Empleyee {
     changeCompany(newCompanyName) {
         this.company = newCompanyName;
     };
-    upGrade(newGradeName) {
-        this.grade = newGradeName
+    upGrade() {
+        if (this.grade === "L1")
+            this.grade = "L2";
+        else if (this.grade === "L2")
+            this.grade = "L3";
+        else this.grade = "L4";
     };
     addSkill(newSkillName) {
-        this.hardSkills.push(newSkillName);
+        let newSkills = [];
+        newSkills = newSkills.push(newSkillName);
+        this.hardSkills = newSkills;
+      //  newSkills.push(newSkillName);
     };
 }
+
+let worker = new Employee("User1", "L2", "frontend", "www");
+console.log("Not changes", "\nname: ", worker.name, "\ngrade: ", worker.grade,
+    "\nhardSkills: ", worker.hardSkills, "\ncompany: ", worker.company)
+worker.changeCompany("new comp");
+worker.upGrade();
+worker.addSkill("Backend")
+console.log("-------------------");
+console.log("Not changes", "\nname: ", worker.name, "\ngrade: ", worker.grade,
+    "\nhardSkills: ", worker.hardSkills, "\ncompany: ", worker.company)
 
 let worker = new Empleyee("User1", "L2", "frontend", "www");
 worker.changeCompany("new comp");
