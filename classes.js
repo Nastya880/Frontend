@@ -19,8 +19,9 @@ class Employee {
     constructor (name, grade, hardSkills, company) {
         this.name = name;
         this.grade = grade;
-        this.hardSkills = hardSkills;
+        this.hardSkills = [];
         this.company = company;
+        this.hardSkills[0] = hardSkills;
     }
 
     changeCompany(newCompanyName) {
@@ -34,10 +35,7 @@ class Employee {
         else this.grade = "L4";
     };
     addSkill(newSkillName) {
-        let newSkills = [];
-        newSkills = newSkills.push(newSkillName);
-        this.hardSkills = newSkills;
-      //  newSkills.push(newSkillName);
+        this.hardSkills.push(newSkillName);
     };
 }
 
@@ -50,8 +48,3 @@ worker.addSkill("Backend")
 console.log("-------------------");
 console.log("Not changes", "\nname: ", worker.name, "\ngrade: ", worker.grade,
     "\nhardSkills: ", worker.hardSkills, "\ncompany: ", worker.company)
-
-let worker = new Empleyee("User1", "L2", "frontend", "www");
-worker.changeCompany("new comp");
-console.log(worker.name);
-console.log(worker.company);
