@@ -7,7 +7,7 @@ function atm(sum) {
   const banknots = [5000, 2000, 1000, 500, 200, 100, 50];
   const result = [];
 
-  if (sum % 50 !== 0) return "Incorrect value";
+  if (sum % 50 !== 0 || sum < 0) return "Incorrect value";
   if (sum > 0) {
     for (let i = 0; i < banknots.length; i++) {
       let note = banknots[i];
@@ -35,3 +35,4 @@ function atm(sum) {
 console.log(atm(8350)); // {5000 : 1, 2000 : 1, 1000 : 1, 200 : 1, 100 : 1, 50 : 1 }
 console.log(atm(2570)); // Incorrect value
 console.log(atm(100050)); // limit exceeded
+console.log(atm(-1050)); // limit exceeded
