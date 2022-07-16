@@ -14,14 +14,15 @@
 -addSkill(newSkillName) - сотрудник может дополнить список своих скиллов.
 */
 
-
 class Employee {
     constructor (name, grade, hardSkills, company) {
         this.name = name;
         this.grade = grade;
         this.hardSkills = [];
         this.company = company;
-        this.hardSkills[0] = hardSkills;
+        for (let i = 0; i < hardSkills.length; ++i) {
+            this.hardSkills[i] = hardSkills[i];
+        }
     }
 
     changeCompany(newCompanyName) {
@@ -39,7 +40,7 @@ class Employee {
     };
 }
 
-let worker = new Employee("User1", "L2", "frontend", "www");
+let worker = new Employee("User1", "L2", ["frontend"], "www");
 console.log("Not changes", "\nname: ", worker.name, "\ngrade: ", worker.grade,
     "\nhardSkills: ", worker.hardSkills, "\ncompany: ", worker.company)
 worker.changeCompany("new comp");
