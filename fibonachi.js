@@ -2,7 +2,7 @@
 // Предположим, что ряд Фибоначчи начинается с 0 индекса
 
 function fibo(index) {
-    if (index == 0 || index == 1) return 1;
+    if (index === 0 || index === 1) return 1;
     else return fibo(index - 1) + fibo(index - 2);
   }
   
