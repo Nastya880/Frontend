@@ -15,7 +15,7 @@
 */
 
 
-export class Empleyee {
+class Empleyee {
     constructor (name, grade, hardSkills, company) {
         this.name = name;
         this.grade = grade;
@@ -32,10 +32,9 @@ export class Empleyee {
     addSkill(newSkillName) {
         this.hardSkills.push(newSkillName);
     };
-    //toString () {
-      //  return `${this.day}/${this.month}/${this.year}`;
-    //}
-
 }
 
-let worker = new Empleyee("User1", "L2", "informatics", "www")
+let worker = new Empleyee("User1", "L2", "frontend", "www");
+worker.changeCompany("new comp");
+console.log(worker.name);
+console.log(worker.company);
