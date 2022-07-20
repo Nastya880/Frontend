@@ -1,0 +1,81 @@
+.name {
+    height: 40px;
+    text-align: center;
+    vertical-align: top;
+    font-family: Arial;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.calc {
+    margin: 50px auto;
+    width: 385px;
+    height: 500px;
+    border-radius: 5px;
+    background: #6ce4dc;
+    color: #656c71;
+    font-family: Arial;
+    padding: 18px;
+}
+
+.firstline {
+    display: grid;
+    grid-template-areas: 
+    "screen cancel";
+    grid-gap: 2px;
+    justify-items: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas: 
+    "1 2 3 4";
+    grid-gap: 2px;
+    justify-items: center;
+}
+
+.screen {
+    width: 276px;
+    height: 87px;
+    background: #fff;
+    border-radius: 5px;
+    color: #b3c6d3;
+    /* text-align: center; */
+    line-height: 44px;
+    font-size: 1.5rem;
+    user-select: none;
+    margin-bottom: 2px;
+}
+
+.btn {
+    width: 84px;
+    height: 87px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cancel {
+    width: 84px;
+    height: 87px;
+    background: #eb3a2d;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover {
+    filter: brightness(75%)
+}
+
+.btn:active {
+    filter: brightness(50%)
+}
